@@ -1,15 +1,16 @@
-import { useState } from 'react'
-import LandPage from './components/landingPage/Landpage'
-import './App.css'
+import { useState } from "react";
+import LandPage from "./components/landingPage/Landpage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <LandPage />
-    </>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
