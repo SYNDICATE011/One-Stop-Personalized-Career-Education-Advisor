@@ -1,0 +1,90 @@
+.body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.auth-links {
+    display: flex;
+    gap: 10px;
+    margin-right: 30px;
+}
+
+span {
+    color: #ff5532;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff5532;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    text-align: flex-start;
+    padding-top: 100px;
+    /* To account for fixed nav */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main-section h1 {
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+.main-section div {
+    display: flex;
+    gap: 20px;
+}
+
+.stats {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    gap: -20px;
+}
+
+.stat{
+    display: grid;    
+    flex-direction: column;
+    justify-content: flex-start;   
+    border: 1px solid #333;    
+    padding: 10px;
+    padding-left: 30px;
+    width: 150px;
+    border-radius: 10px;
+    height: 100px;
+    gap: 0;
+    margin: 0;
+}
+
+.field-name{
+    border: 1px solid #333;
+    width:fit-content;
+    padding: 5px;
+    border-radius: 5px;
+}
