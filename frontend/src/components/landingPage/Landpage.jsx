@@ -7,6 +7,12 @@ import Person3 from "../../assets/person3.png";
 import Person4 from "../../assets/person4.png";
 import Pencil from "../../assets/girl_pencil.png";
 import Star from "../../assets/star.png";
+import card1 from "../../assets/card_image_1.png";
+import card2 from "../../assets/card_image_2.png";
+import card3 from "../../assets/card_image_3.png";
+import card4 from "../../assets/card_image_4.png";
+import card5 from "../../assets/card_image_5.png";
+import Hand from "../../assets/section3_hand.png";
 
 const LandPage = () => {
   const cardsRef = useRef();
@@ -41,38 +47,6 @@ const LandPage = () => {
     ],
     section2: {
       buttons: ["New Courses", "Recommended", "Most Popular"],
-      cards: [
-        {
-          img: "https://img.freepik.com/free-photo/young-happy-student-with-backpack-standing-campus_171337-1566.jpg?w=740&t=st=1687336321~exp=1687336921~hmac=3e2a5f0e4a3e2f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4",
-          title: "Business Management",
-          button: "More Details",
-        },
-        {
-          img: "https://img.freepik.com/free-photo/young-happy-student-with-backpack-standing-campus_171337-1566.jpg?w=740&t=st=1687336321~exp=1687336921~hmac=3e2a5f0e4a3e2f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4",
-          title: "Business Management",
-          button: "More Details",
-        },
-        {
-          img: "https://img.freepik.com/free-photo/young-happy-student-with-backpack-standing-campus_171337-1566.jpg?w=740&t=st=1687336321~exp=1687336921~hmac=3e2a5f0e4a3e2f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4",
-          title: "Business Management",
-          button: "More Details",
-        },
-        {
-          img: "https://img.freepik.com/free-photo/young-happy-student-with-backpack-standing-campus_171337-1566.jpg?w=740&t=st=1687336321~exp=1687336921~hmac=3e2a5f0e4a3e2f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4",
-          title: "Business Management",
-          button: "More Details",
-        },
-        {
-          img: "https://img.freepik.com/free-photo/young-happy-student-with-backpack-standing-campus_171337-1566.jpg?w=740&t=st=1687336321~exp=1687336921~hmac=3e2a5f0e4a3e2f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4",
-          title: "Business Management",
-          button: "More Details",
-        },
-        {
-          img: "https://img.freepik.com/free-photo/young-happy-student-with-backpack-standing-campus_171337-1566.jpg?w=740&t=st=1687336321~exp=1687336921~hmac=3e2a5f0e4a3e2f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4b1c8e4f0e4",
-          title: "Business Management",
-          button: "More Details",
-        },
-      ],
     },
     section4: {
       buttons: [
@@ -194,55 +168,94 @@ const LandPage = () => {
             ))}
           </div>
         </div>
-        <div className="course-cards" ref={cardsRef}>
-          {components.section2.cards.map((card, index) => (
-            <div className="cards" key={index}>
-              <img src={card.img} alt={card.title} />
-              <h3>{card.title}</h3>
-              <button>{card.button}</button>
-            </div>
-          ))}
+        <div className="absolute top-25 right-5 flex flex-col gap-5 justify-start items-start w-[25%]">
+          <p className="border-1 p-2 rounded-mdb bg-[#fccc42] rounded-md">our courses</p>
+          <p className="">Make education work for you with flexible online courses from leading schools</p>
+        </div>
+        <div className="relative top-10 flex flex-row gap-8  ">
+          <div className="border-1 border-[#00000073] rounded-xl p-2 flex flex-col gap-3">
+            <img src={card1} alt="" className="h-[250px] rounded-xl" />
+            <h3>Creative Writing for Beginners</h3>
+            <button className="border-1 p-1 rounded-md bg-[#ff5734] text-white border-[#0000006d]">
+              more details
+            </button>
+          </div>
+          <div className="border-1 border-[#00000073]  rounded-xl p-2 flex flex-col gap-3">
+            <img src={card2} alt="" className="h-[250px] rounded-xl" />
+            <h3>Creative Writing for Beginners</h3>
+            <button className="border-1 p-1 rounded-md bg-[#ff5734] text-white border-[#0000006d]">
+              more details
+            </button>
+          </div>
+          <div className="border-1 border-[#00000073]  rounded-xl p-2 flex flex-col gap-3">
+            <img src={card3} alt="" className="h-[250px] rounded-xl" />
+            <h3>Creative Writing for Beginners</h3>
+            <button className="border-1 p-1 rounded-md bg-[#ff5734] text-white border-[#0000006d]">
+              more details
+            </button>
+          </div>
+          <div className="border-1 border-[#00000073]  rounded-xl p-2 flex flex-col gap-3">
+            <img src={card4} alt="" className="h-[250px] rounded-xl" />
+            <h3>Creative Writing for Beginners</h3>
+            <button className="border-1 p-1 rounded-md bg-[#ff5734] text-white border-[#0000006d]">
+              more details
+            </button>
+          </div>
+          <div className="border-1 border-[#00000073]  rounded-xl p-2 flex flex-col gap-3">
+            <img src={card5} alt="" className="h-[250px] rounded-xl" />
+            <h3>Creative Writing for Beginners</h3>
+            <button className="border-1 p-1 rounded-md bg-[#ff5734] text-white border-[#0000006d]">
+              more details
+            </button>
+          </div>
         </div>
       </div>
-      <div className="section-3">
-        <div className="section-3-content">
-          <h1>
-            Upgrade your <span>skills</span>
-            <br /> with <span>FREE</span>online courses
+      <div className="h-[80vh] p-8">
+        <img src={Hand} alt="" className="absolute right-20 h-[490px]" />
+        <div className="border-1 border-[#0000003d] h-[91%] bg-[#fccc42] pl-10 p-6 flex rounded-2xl flex-col gap-6 items-start">
+          <h1 className="text-[50px] font-semibold">
+            Upgrade your <span className="text-white">skills</span>
+            <br /> with <span className="text-white">FREE</span> online courses
             <br />
           </h1>
-          <p>Ready to gain in-demand skills to kickstart your career?</p>
-          <button>Start now</button>
+          <p className="w-[50%] font-medium">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste soluta velit ea blanditiis vel a
+            perspiciatis in distinctio natus dolorem inventore expedita, totam eum aliquid voluptatibus esse
+            fugiat animi neque.
+          </p>
+          <button className="relative top-20  p-2 pr-4 pl-4 rounded-xl bg-black text-white">Start now</button>
         </div>
       </div>
-      <div className="section-4">
+      <div className="h-[90vh] p-8 pt-0">
         <div>
-          <div className="section-4-heading">
-            <h1>
+          <div className="flex justify-between">
+            <h1 className="font-bold text-[70px]">
               Explore
-              <br /> top <span>subjects</span>
+              <br /> top <span className="text-[#ff5532]">subjects</span>
             </h1>
-            <div>
-              <button>Our Subjects</button>
-              <p>We have the largest selection of subjects to study with our online courses</p>
+            <div className=" flex flex-col items-start gap-5 w-[30%]">
+              <button className="border-1 p-1 rounded-md bg-[#fccc42]">Our Subjects</button>
+              <p className="">We have the largest selection of subjects to study with our online courses</p>
             </div>
           </div>
-          <div className="course" ref={cardsRef}>
+          <div className="relative top-10 flex gap-4" ref={cardsRef}>
             {components.section4.buttons.map((button, index) => (
-              <button key={index}>{button}</button>
+              <button className="border-1 p-2  rounded-2xl" key={index}>
+                {button}
+              </button>
             ))}
           </div>
         </div>
-        <div className="section-4-lower">
-          <div className="section-4-info">
-            <p>
+        <div className="flex relative gap-5 top-[80px] items-center justify-between ">
+          <div className="flex flex-col gap-6 mt-[50px] pb-5 ">
+            <p className="w-[40%] text-[20px]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda libero iusto numquam
               consequuntur facilis voluptas, sed ipsa, harum inventore eveniet fugiat asperiores ipsam! Veniam
               aliquid voluptatum eius, praesentium provident perspiciatis!
             </p>
-            <div className="section-4-buttons">
-              <button className="btn">Explore courses</button>
-              <button className="btn-trans">view all subjects</button>
+            <div className="flex gap-7">
+              <button className="p-2 bg-[#ff5532] rounded-md">Explore courses</button>
+              <button className="bg-[#fff] pr-2 pl-2 rounded-md border-1">view all subjects</button>
             </div>
           </div>
         </div>
