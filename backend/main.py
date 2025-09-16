@@ -5,9 +5,18 @@ from starlette.middleware.sessions import SessionMiddleware
 
 from app.api import api_router
 from app.core.authentication import get_current_user
+from app.database.user_model import Users
 
 app = FastAPI()
 
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(api_router)
 
@@ -19,5 +28,5 @@ async def favicon():
 
 
 @app.get('/')
-async def health(user=Depends(get_current_user)):
+async def health(user: Users = Depends(get_current_user)):
     return user
