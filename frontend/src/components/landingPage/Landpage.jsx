@@ -13,8 +13,10 @@ import card3 from "../../assets/card_image_3.png";
 import card4 from "../../assets/card_image_4.png";
 import card5 from "../../assets/card_image_5.png";
 import Hand from "../../assets/section3_hand.png";
+import { useNavigate } from "react-router-dom";
 
 const LandPage = () => {
+  const navigate = useNavigate();
   const cardsRef = useRef();
   const handleWheel = (event) => {
     event.preventDefault();
@@ -24,6 +26,10 @@ const LandPage = () => {
   useEffect(() => {
     cardsRef.current.addEventListener("wheel", handleWheel);
   }, []);
+
+  const goToDashboard = () => {
+    navigate("/dashboard");
+  };
 
   const components = {
     nav: ["About", "FAQ", "Subjects", "Courses", "Degrees", "ForBusiness"],
@@ -64,7 +70,7 @@ const LandPage = () => {
   };
 
   return (
-    <div className="[position:inherit] bg-[#f7f7f5]">
+    <div className="[position:inherit] bg-[#f7f7f5] " style={{ fontFamily: "'Kodchasan', sans-serif" }}>
       <nav className="z-1 m-0 p-5 pl-7 pr-7 items-center justify-between w-[100%] bg-[#f7f7f5]  fixed box-border flex">
         <h1 className="text-2xl font-bold">
           <span className="text-[#ff5532]">Learn</span>ify
@@ -87,6 +93,12 @@ const LandPage = () => {
             </SignInButton>
           </SignedOut>
           <SignedIn>
+            <button
+              onClick={goToDashboard}
+              className="text-[#fff] p-3 pt-[6px] pb-[6px] border-[#00000071] border-1 bg-[#ff5532] rounded-md hover:bg-[#f7431f] cursor-pointer"
+            >
+              Dashboard
+            </button>
             <UserButton />
           </SignedIn>
         </ul>

@@ -6,7 +6,7 @@ api_router = APIRouter()
 
 api_router.include_router(
     user_router,
-    prefix='v1/user',
+    prefix='/v1/user',
     tags=['users']
 )
 
