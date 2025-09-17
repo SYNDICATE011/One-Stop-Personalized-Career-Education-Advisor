@@ -5,7 +5,7 @@ from starlette.middleware.sessions import SessionMiddleware
 
 from app.api import api_router
 from app.core.authentication import get_current_user
-from app.database.user_model import Users
+from app.database.user_model import User
 
 app = FastAPI()
 
@@ -28,5 +28,5 @@ async def favicon():
 
 
 @app.get('/')
-async def health(user: Users = Depends(get_current_user)):
+async def health(user: User = Depends(get_current_user)):
     return user

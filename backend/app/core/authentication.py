@@ -4,7 +4,7 @@ from fastapi import FastAPI, Depends, HTTPException, Header, Request
 from fastapi.security import HTTPBearer
 from sqlalchemy.orm import Session
 
-from app.database.user_model import Users
+from app.database.user_model import User
 from app.core.config import settings
 from app.core.psql_connection import get_db
 
@@ -46,13 +46,13 @@ def get_current_user(request: Request, db: Session = Depends(get_db)):
 
         user_id = request_state.payload.get('sub')
 
-        user = db.query(Users).filter(Users.clerk_id == user_id).first()
+        user = db.query(User).filter(User.clerk_id == user_id).first()
         if user:
             return user
 
         user = get_clerk_user(user_id)
 
-        new_user = Users(
+        new_user = User(
             clerk_id=user['id'],
             email=user['email_addresses'][0]['email_address'],
             name=user['first_name'],

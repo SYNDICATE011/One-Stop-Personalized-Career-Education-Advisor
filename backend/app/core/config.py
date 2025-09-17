@@ -15,6 +15,9 @@ class Settings(BaseSettings):
     CLERK_SECRETE_KEY: str
     JWT_KEY: str
 
+    OPENROUTER_API_KEY: str
+    OPENROUTER_ENDPOINT: str
+
     class Config:
         env_file = os.path.join(os.path.dirname(__file__), "../../.env")
         env_file_encoding = "utf-8"
